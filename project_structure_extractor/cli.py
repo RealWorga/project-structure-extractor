@@ -10,6 +10,14 @@ from project_structure_extractor.extractor import extract_structure
 @click.option('--hidden-included', is_flag=True, help='Include hidden folders/files in the structure.')
 @click.option('--ignore', default='', help='Comma-separated list of files or folders to ignore.')
 def cli(path, hidden_included, ignore):
+    if not os.path.exists(path):
+        click.echo(f"Error: The path {path} does not exist.")
+        return
+
+    if not os.path.isdir(path):
+        click.echo(f"Error: {path} is not a directory.")
+        return
+
     path = os.path.abspath(path)
     project_name = os.path.basename(path)
     suffix = "_with_hidden" if hidden_included else ""
