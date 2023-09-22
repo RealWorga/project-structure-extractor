@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+import os
+
 def extract_structure(path, file_handle, prefix='', include_hidden=False, ignore_list=None):
     if not ignore_list:
         ignore_list = []
