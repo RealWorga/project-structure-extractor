@@ -9,7 +9,7 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        structure-extractor=project_structure_extractor.cli:cli
+        extract-structure=project_structure_extractor.cli:cli
     ''',
     author="Hamed Haghjo",
     author_email="hamedhaghjo@hotmail.com",
