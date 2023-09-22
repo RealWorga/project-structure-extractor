@@ -83,6 +83,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 For a detailed history of changes, see [CHANGELOG.md](./CHANGELOG.md).
 
 - **0.1.0** - Initial release with basic features.
+- **0.1.1** - No foundational changes, more a lean towards automation builds
 - **...** - ... (and so on for a few recent versions)
 
 ---
