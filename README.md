@@ -46,11 +46,11 @@ pip install --upgrade dist/project-structure-extractor-0.1.0.tar.gz
 
 ## Usage
 
-After installation, you can run the `structure-extractor` directly from the CLI.
+After installation, you can run the `extract-structure` directly from the CLI.
 
 To extract the structure of a project, use:
 ```
-structure-extractor --path path_to_project_directory
+extract-structure --path path_to_project_directory
 ```
 
 Options available:
@@ -60,7 +60,7 @@ Options available:
 
 For example, to extract the structure including hidden files but ignoring a specific folder:
 ```
-structure-extractor --path ./my_project --hidden-included --ignore node_modules,build
+extract-structure --path ./my_project --hidden-included --ignore node_modules,build
 ```
 
 ## Requirements
