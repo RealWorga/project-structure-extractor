@@ -26,6 +26,7 @@ def cli(path, hidden_included, ignore):
     ignore_list = [os.path.abspath(i.strip()) for i in ignore.split(',')] if ignore else []
 
     with open(output_file_path, 'w', encoding='utf-8') as file_handle:
+        ignore_list.append(os.path.abspath(output_file_path))
         file_handle.write(f"{project_name}/\n")
         extract_structure(path, file_handle, include_hidden=hidden_included, ignore_list=ignore_list)
 
