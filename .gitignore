@@ -1,5 +1,4 @@
-project_structure_extractor/__pycache__/__init__.cpython-39.pyc
-project_structure_extractor/__pycache__/core.cpython-39.pyc
+project_structure_extractor/__pycache__/*
 venv/*
 project_structure_extractor.egg-info/*
 build/*
