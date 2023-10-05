@@ -21,12 +21,12 @@ def cli(path, hidden_included, ignore):
     path = os.path.abspath(path)
     project_name = os.path.basename(path)
     suffix = "_with_hidden" if hidden_included else ""
-    output_file_path = os.path.join(path, f"{project_name}_structure{suffix}.txt")
+    output_file_path = os.path.join(os.path.dirname(path), f"{project_name}_structure{suffix}.txt")
 
     ignore_list = [os.path.abspath(i.strip()) for i in ignore.split(',')] if ignore else []
+    ignore_list.append(output_file_path)
 
     with open(output_file_path, 'w', encoding='utf-8') as file_handle:
-        ignore_list.append(os.path.abspath(output_file_path))
         file_handle.write(f"{project_name}/\n")
         extract_structure(path, file_handle, include_hidden=hidden_included, ignore_list=ignore_list)
 
